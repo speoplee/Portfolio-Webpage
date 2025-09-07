@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>speoplee — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+  <div class="canvas-space">
+    <div class="outer-glow" aria-hidden="true"></div>
+
+    <div class="fixed-top-left"><div class="logo">NaNo</div></div>
+
+    <div class="page-wrap">
+      <main class="hero-area">
+        <div class="panel" id="panel">
+          <div class="panel-inner">
+            <div class="left-col">
+              <p class="eyebrow">Gameplay Programmer | Roblox Developer</p>
+              <h1 class="title">CODE<br><span>TEST</span><br>PLAY</h1>
+              <p class="desc">
+                Gameplay programmer focused on scalable systems, real-time optimization and modular architectures. Currently living in Santiago, Chile. Building performant, scalable and modular systems.
+              </p>
+              <div class="actions">
+                <a class="btn" href="#contact">Contact</a>
+                <a class="ghost" href="#work">Ver trabajos</a>
+              </div>
+            </div>
+            <div class="right-col">
+              <div class="meta"><p>Full-stack Coding</p><p class="small">Avaiable for Roblox projects</p></div>
+            </div>
+          </div>
+          <div class="bg-words" aria-hidden="true">CODE • UI • ROBLOX</div>
+        </div>
+      </main>
+
+      <section id="work" class="work-section" aria-label="Trabajos y proyectos">
+        <div class="work-head">
+          <h2>Projects</h2>
+          <p class="work-sub">Videos and Github Repositories</p>
+        </div>
+
+        <div class="carousel-wrap" tabindex="0" aria-roledescription="carrusel de trabajos" aria-label="Carrusel de proyectos">
+          <button class="carousel-btn prev" aria-label="Anterior">◀</button>
+
+          <div class="carousel-viewport" aria-hidden="false">
+            <div class="carousel-track">
+
+              <!-- WeaponFramework -->
+              <figure class="carousel-item" data-type="video" id="weapon">
+                <video playsinline controls preload="metadata" loop poster="Videos/WeaponFramework_thumb.jpg">
+                  <source src="Videos/WeaponFramework.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>WeaponFramework</strong> — MW2 Style Gun Engine: Procedural Animations, Attachments support, ADS, Pattern-Based Recoil and Bux-Muller with Gaussian Randomness spread
+                  <div class="project-links">
+                    <a class="project-link" href="https://github.com/speoplee/speoplee-s-creations/" target="_blank" rel="noopener noreferrer">View code</a>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- Pathfinding -->
+              <figure class="carousel-item" data-type="video" id="pathfinding">
+                <video playsinline controls preload="metadata" loop poster="Videos/Pathfinding_thumb.jpg">
+                  <source src="Videos/Pathfinding.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>Pathfinding</strong> — A* 3D, practice system. Only supports X and Z axis.
+                  <div class="project-links">
+                    <a class="project-link" href="https://github.com/speoplee/speoplee-s-creations/" target="_blank" rel="noopener noreferrer">View code</a>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- Inventory -->
+              <figure class="carousel-item" data-type="video" id="inventory">
+                <video playsinline controls preload="metadata" loop poster="Videos/Inventory_thumb.jpg">
+                  <source src="Videos/Inventory.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>Inventory (RE8 Styled)</strong> — Resident Evil styled Inventory System. Grid-based, multi-slot item support, and briefcase design.
+                  <div class="project-links">
+                    <a class="project-link" href="https://github.com/speoplee/speoplee-s-creations/" target="_blank" rel="noopener noreferrer">View code</a>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- Lockpicking -->
+              <figure class="carousel-item" data-type="video" id="lockpicking">
+                <video playsinline controls preload="metadata" loop poster="Videos/Lockpicking_thumb.jpg">
+                  <source src="Videos/Lockpicking.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>Lockpicking</strong> — Inspired by Ares VR, a lockpicking minigame with crispy mechanichs.
+                  <div class="project-links">
+                    <a class="project-link" href="https://github.com/speoplee/speoplee-s-creations/" target="_blank" rel="noopener noreferrer">View code</a>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- RayTracing -->
+              <figure class="carousel-item" data-type="video" id="raytracing">
+                <video playsinline controls preload="metadata" loop poster="Videos/RayTracing_thumb.jpg">
+                  <source src="Videos/RayTracing.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>RayTracing (Reflections)</strong> — Ray Tracing reflections prototype. Uses lambert lighting model.
+                  <div class="project-links">
+                    <span class="no-code">No code available</span>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- Drone (reemplaza GI) -->
+              <figure class="carousel-item" data-type="video" id="drone">
+                <video playsinline controls preload="metadata" loop poster="Videos/Drone_thumb.jpg">
+                  <source src="Videos/Drone.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>Drone</strong> — Simple drone AI with obstacles avoidance, and movement. Destroyable
+                  <div class="project-links">
+                    <span class="no-code">No code available</span>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- EggSystem -->
+              <figure class="carousel-item" data-type="video" id="eggsystem">
+                <video playsinline controls preload="metadata" loop poster="Videos/EggSystem_thumb.jpg">
+                  <source src="Videos/EggSystem.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                  <strong>EggSystem</strong> — Growing, Planting, and Datastore saving.
+                  <div class="project-links">
+                    <span class="no-code">No code available</span>
+                  </div>
+                </figcaption>
+              </figure>
+
+            </div>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Siguiente">▶</button>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="contact-section" aria-label="Contacto">
+        <div class="contact-inner">
+          <h2>Contact</h2>
+          <p>Discord: <strong>nanoworker</strong></p>
+          <p class="small">Available for remote freelance jobs.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  </body>
+</html>
