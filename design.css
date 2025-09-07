@@ -31,23 +31,17 @@ body{
  display:block;
  padding:48px 22px;
  overflow-y:auto;
- overflow-x:hidden; /* importante: evitar scroll horizontal global */
+ overflow-x:hidden;
  background-attachment:fixed;
 }
 
-
-/* container + glow */
 .canvas-space{position:relative;width:100%;display:block;margin:0 auto}
 .outer-glow{position:absolute;inset:12% -6%;background:linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.85));filter: blur(36px);z-index:0;border-radius:18px;pointer-events:none}
 
-
-/* fixed corners */
 .fixed-top-left,.fixed-top-right,.fixed-bottom-right{position:fixed;z-index:60;display:flex;align-items:center;gap:10px;pointer-events:auto}
 .fixed-top-left{top:18px; left:18px}
 .logo{font-weight:800;font-size:15px;letter-spacing:0.6px;color:rgba(255,255,255,0.95);padding:6px 8px}
 
-
-/* menu btn */
 .fixed-top-right{top:14px; right:18px}
 .menu-btn{width:56px;height:42px;border-radius:10px;border:none;background:transparent;cursor:pointer;padding:6px;display:grid;place-items:center}
 .menu-btn span{display:block;height:3px;width:30px;background:rgba(255,255,255,0.92);margin:2px 0;border-radius:2px;transition: transform 220ms ease, opacity 180ms ease;transform: translateZ(0)}
@@ -55,26 +49,18 @@ body{
 .menu-btn.open span:nth-child(2){ opacity:0; transform: scaleX(.2) }
 .menu-btn.open span:nth-child(3){ transform: translateY(-6px) rotate(-45deg) }
 
-
-/* bottom-right links */
 .fixed-bottom-right{bottom:18px; right:18px; flex-direction:column; align-items:flex-end}
 .fixed-bottom-right a{color:rgba(255,255,255,0.45);text-decoration:none;margin:6px 0;font-weight:700;font-size:13px}
 .fixed-bottom-right a:hover{color:var(--accent)}
 
-
-/* page wrapper */
 .page-wrap{position:relative;width:100%;max-width:calc(var(--max-width) + 120px);z-index:2;display:flex;flex-direction:column;gap:48px;align-items:stretch;margin: 8px auto 64px;padding-bottom:40px}
 .hero-area{display:block;padding:24px 20px;max-width:var(--max-width);margin:0 auto}
 
-
-/* panel */
 .panel{position:relative;width:100%;max-width:var(--max-width);min-height:420px;background: linear-gradient(180deg, rgba(18,18,18,0.94), rgba(8,8,8,0.86));border-radius:calc(var(--radius) + 6px);box-shadow: var(--shadow-strong), inset 0 1px 0 rgba(255,255,255,0.02);overflow:visible;padding:46px;border:1px solid rgba(255,255,255,0.02);margin: 28px 0;transform-origin:center}
 
 
-/* panel inner */
 .panel-inner{position:relative;z-index:8;display:grid;grid-template-columns: 1fr 320px;gap:40px;align-items:start}
-/* moved meta down visually by giving the right column a top offset */
-.right-col{display:flex;flex-direction:column;align-items:flex-end;padding-top:48px} /* <-- meta más abajo */
+.right-col{display:flex;flex-direction:column;align-items:flex-end;padding-top:48px} 
 
 
 .left-col{padding-right:10px}
@@ -83,10 +69,7 @@ body{
 .title span{color:rgba(255,255,255,0.9)}
 .desc{color:var(--muted);max-width:680px;font-size:15px;margin-bottom:24px;line-height:1.6;font-weight:600;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 
-
-/* actions */
 .actions{display:flex;gap:12px;flex-wrap:wrap}
-/* Animación mejorada para el hover de los botones principales */
 .btn {
  background: transparent;
  color: #fff;
@@ -104,14 +87,13 @@ body{
 
 
 .btn:hover {
- transform: translateY(-4px) scale(1.05); /* un poco más grande */
+ transform: translateY(-4px) scale(1.05);
  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
  border-color: var(--accent);
  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
 }
 
 
-/* Animación hover para el botón "Ver trabajos" */
 .ghost {
  color: var(--muted);
  align-self: center;
@@ -149,20 +131,17 @@ body{
 }
 
 
-/* meta box (visualmente más abajo por padding-top en .right-col) */
 .meta{background:var(--glass);padding:16px;border-radius:12px;backdrop-filter: blur(4px);min-width:230px;text-align:right}
 .meta p{margin:0;font-size:13px;color:rgba(255,255,255,0.9);font-weight:600;-webkit-font-smoothing:antialiased}
 .meta .small{color:var(--muted);margin-top:8px;font-size:12px;font-weight:600}
 
 
-/* bg words */
 .bg-words{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family: "Poppins", "Montserrat", sans-serif;font-weight:800;font-size:110px;letter-spacing:10px;color:rgba(255,255,255,0.03);pointer-events:none;z-index:4;transform-origin:center;text-align:center;user-select:none}
 
 
-/* work section: más abajo (margen superior aumentado) */
 .work-section{
  max-width:var(--max-width);
- margin:200px auto 120px; /* margen superior más grande */
+ margin:200px auto 120px;
  padding:36px 28px;
  border-radius:16px;
  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
@@ -172,7 +151,6 @@ body{
 .work-sub{color:var(--muted);margin-top:6px;font-size:14px}
 
 
-/* carousel: NO usa scroll nativo; viewport oculta overflow (sin scrollbar) */
 .carousel-wrap{position:relative;margin-top:18px;display:flex;align-items:center;gap:12px;width:100%}
 .carousel-btn{background:transparent;border:none;color:rgba(255,255,255,0.9);font-size:16px;padding:8px;cursor:pointer;border-radius:10px;transition: transform var(--transition-fast), color var(--transition-fast)}
 .carousel-btn:hover{transform:translateY(-3px);color:var(--accent)}
@@ -180,7 +158,6 @@ body{
 .carousel-btn.next{margin-right:6px}
 
 
-/* viewport oculto y sin barra */
 .carousel-viewport{overflow:hidden;flex:1;padding:12px 4px;background:transparent}
 .carousel-track{display:flex;gap:18px;align-items:center;transition:transform 420ms cubic-bezier(.2,.9,.2,1);will-change:transform;padding-bottom:6px}
 .carousel-item{flex:0 0 360px;border-radius:12px;background:rgba(255,255,255,0.02);overflow:hidden;backdrop-filter: blur(4px);box-shadow: 0 8px 18px rgba(0,0,0,0.45);transition: transform var(--transition-med), box-shadow var(--transition-fast)}
@@ -189,7 +166,6 @@ body{
 .carousel-item:hover, .carousel-item:focus-within{transform: translateY(-6px) scale(1.02);box-shadow: 0 18px 30px rgba(0,0,0,0.6)}
 
 
-/* link tile */
 .project-link{display:block;text-decoration:none;color:inherit}
 .link-tile{display:flex;gap:12px;align-items:center;padding:18px;min-height:220px;background:transparent}
 .link-tile svg{opacity:0.95}
@@ -197,21 +173,17 @@ body{
 .link-meta .link-sub{font-size:13px;color:var(--muted)}
 
 
-/* active visual */
 .carousel-item.is-active{outline: 1px solid rgba(255,255,255,0.03)}
 
 
-/* sections simples */
 .centered-section{max-width:var(--max-width);margin:0 auto;padding:36px 28px;border-radius:12px;background:transparent}
 .centered-section h3{font-family:"Poppins";margin-bottom:8px}
 .centered-section p{color:var(--muted)}
 
 
-/* accessibility */
 :focus{outline:none}
 :focus-visible{outline:3px solid rgba(245,180,0,0.15);outline-offset:4px;border-radius:8px}
 
-/* Contact section styling */
 .contact-section{
   max-width:var(--max-width);
   margin:28px auto 80px;
@@ -225,7 +197,6 @@ body{
 .contact-inner a{color:var(--accent);text-decoration:none;font-weight:700}
 .contact-inner a:hover{text-decoration:underline;opacity:0.95}
 
-/* Make project-links visible and spaced */
 .project-links{margin-top:8px;display:flex;gap:10px;align-items:center}
 .project-links .project-link,
 .project-links .project-demo{
@@ -235,12 +206,9 @@ body{
 .project-links .project-link:hover,
 .project-links .project-demo:hover{color:var(--accent);transform:translateY(-2px)}
 
-/* responsive */
 @media (max-width:1100px){.panel-inner{grid-template-columns:1fr 260px}.title{font-size:52px}.bg-words{font-size:88px}}
 @media (max-width:980px){.panel-inner{grid-template-columns:1fr}.right-col{align-items:flex-start}.title{font-size:44px}.bg-words{font-size:72px;letter-spacing:8px}}
 @media (max-width:720px){.carousel-item{flex:0 0 84%}.carousel-item img, .carousel-item video{height:180px}}
 @media (max-width:520px){.panel{padding:22px;border-radius:14px;min-height:auto}.title{font-size:28px}.eyebrow{font-size:12px}.bg-words{font-size:30px}.meta{min-width:auto;width:100%;text-align:left}.panel{margin:8px}.fixed-bottom-right{flex-direction:row;gap:12px;right:12px;bottom:10px}.fixed-bottom-right a{font-size:12px;margin:0}.fixed-top-left{left:12px;top:12px}.fixed-top-right{right:12px;top:12px}}
 
-
-/* motion reduce */
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
